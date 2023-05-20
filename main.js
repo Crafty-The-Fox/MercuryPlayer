@@ -602,10 +602,10 @@ function render(now) {
 
   // lanes
   const laneGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, maxR)
-  laneGradient.addColorStop(0, 'rgba(128,128,128,0)');
-  laneGradient.addColorStop(0.1, 'rgba(128,128,128,0)');
-  laneGradient.addColorStop(0.2, 'rgba(128,128,128,0.3)');
-  laneGradient.addColorStop(1, 'rgba(128,128,128,0.8)');
+  laneGradient.addColorStop(0, 'rgba(255,255,255,0)');
+  laneGradient.addColorStop(0.1, 'rgba(255,255,255,0)');
+  laneGradient.addColorStop(0.2, 'rgba(255,255,255,0.3)');
+  laneGradient.addColorStop(1, 'rgba(255,255,255,0.8)');
   ctx.lineWidth = 1 * displayRatio
   ctx.strokeStyle = laneGradient
   ctx.beginPath();
@@ -657,8 +657,8 @@ function render(now) {
   updateLaneOnState(previousTs, currentTs)
   // black out "off" lanes
   const laneBgGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, maxR)
-  laneBgGradient.addColorStop(0, 'rgba(255,255,255,0)');
-  laneBgGradient.addColorStop(0.2, 'rgba(255,255,255,0.1)');
+  laneBgGradient.addColorStop(0, 'rgba(128,128,128,0.3)');
+  laneBgGradient.addColorStop(0.2, 'rgba(128,128,128,0.3)');
   laneBgGradient.addColorStop(1, enableBga ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.4)');
   ctx.fillStyle = laneBgGradient
   ctx.beginPath()
